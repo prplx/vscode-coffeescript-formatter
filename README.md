@@ -1,5 +1,7 @@
 # CoffeeScript Formatter
 
+https://marketplace.visualstudio.com/items?itemName=prplx.coffeescript-formatter
+
 CoffeeScript formatter based on coffee-fmt npm module https://www.npmjs.com/package/coffee-fmt.
 
 ## Usage
@@ -12,7 +14,7 @@ Open Command Palette(⇧⌘P) and type Format CoffeeScript or press ⇧⌥F.
 
 This extension contributes the following settings:
 
-* `coffeeScriptFormatter.enable`: enable/disable this extension
+* `coffeescriptFormatter.enable`: enable/disable this extension
 
 ## Known Issues
 
