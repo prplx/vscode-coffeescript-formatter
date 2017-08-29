@@ -2,26 +2,38 @@
   "name": "coffeescript-formatter",
   "displayName": "CoffeeScript Formatter",
   "description": "CoffeeScript formatter based on coffee-fmt package.",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "publisher": "prplx",
   "engines": {
     "vscode": "^1.15.0"
   },
-  "categories": [
-    "Other"
-  ],
-  "activationEvents": [
-    "onCommand:extension.format"
-  ],
+  "categories": ["Formatters"],
+  "activationEvents": ["onCommand:extension.format"],
   "main": "./extension",
   "contributes": {
+    "configuration": {
+      "type": "object",
+      "title": "CoffeeScript Formatter configuration",
+      "properties": {
+        "coffescriptFormatter.enable": {
+          "type": "boolean",
+          "default": "true",
+          "description": "Enable/disable extension."
+        }
+      }
+    },
     "commands": [
       {
         "command": "extension.format",
         "title": "Format CoffeeScript"
       }
     ],
-    "keybindings": {"command": "extension.format", "key": "ctrl+shift+f", "mac": "cmd+shift+f", "when": "editorTextFocus"}
+    "keybindings": {
+      "command": "extension.format",
+      "key": "shift+alt+f",
+      "mac": "shift+alt+f",
+      "when": "editorTextFocus"
+    }
   },
   "scripts": {
     "postinstall": "node ./node_modules/vscode/bin/install",
